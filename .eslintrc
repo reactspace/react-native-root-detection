@@ -1,0 +1,105 @@
+{
+  "parser"  : "babel-eslint",
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "extends" : [
+    "standard",
+    "standard-react",
+    "airbnb"
+  ],
+  "root": true,
+  "plugins": [
+    "babel",
+    "react-native"
+  ],
+  "env": {
+    "browser" : true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "settings" : {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".android.js",
+          ".ios.js",
+          ".native.js"
+        ]
+      }
+    }
+  },
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__BASENAME__" : false,
+    "expect": true,
+    "faker": true,
+    "mount": true,
+    "render": true,
+    "shallow": true,
+    "sinon": true,
+    "__": true,
+    "__n": true
+  },
+  "rules": {
+    "import/named": [false],
+    "react/no-this-in-sfc": [false],
+    "react/jsx-curly-brace-presence": [false],
+    "react/destructuring-assignment": [false],
+    "camelcase": [0],
+    "react/require-default-props": [0],
+    "react/default-props-match-prop-types": [0],
+    "object-curly-newline": 0,
+    "semi": [2, "always"],
+    "max-len": [2, 200, 2],
+    "comma-dangle": 0,
+    "global-require": 0,
+    "generator-star-spacing": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/extensions": ["error", "ignorePackages"],
+    "import/no-unresolved": ["error", {"ignore": [ "react" , "react-native"]}],
+    "react/sort-comp": [2, {
+      "order": [
+        "static-properties",
+        "static-methods",
+        "lifecycle",
+        "render",
+        "/^render.+$/",
+        "/^on.+$/",
+        "everything-else"
+      ],
+      "groups": {
+        "lifecycle": [
+          "displayName",
+          "propTypes",
+          "contextTypes",
+          "childContextTypes",
+          "mixins",
+          "statics",
+          "defaultProps",
+          "constructor",
+          "getDefaultProps",
+          "state",
+          "getInitialState",
+          "getChildContext",
+          "getDerivedStateFromProps",
+          "componentWillMount",
+          "UNSAFE_componentWillMount",
+          "componentDidMount",
+          "componentWillReceiveProps",
+          "UNSAFE_componentWillReceiveProps",
+          "shouldComponentUpdate",
+          "componentWillUpdate",
+          "getSnapshotBeforeUpdate",
+          "UNSAFE_componentWillUpdate",
+          "componentDidUpdate",
+          "componentWillUnmount"
+        ]
+      }
+    }]
+  }
+}

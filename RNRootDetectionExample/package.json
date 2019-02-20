@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "react-native": "watchman watch-del-all && react-native start --reset-cache",
+    "mobile": "npm run react-native",
     "test": "jest"
   },
   "dependencies": {
@@ -13,6 +15,7 @@
   "devDependencies": {
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "24.1.0",
+    "babel-plugin-module-resolver": "^3.2.0",
     "jest": "24.1.0",
     "metro-react-native-babel-preset": "0.52.0",
     "react-test-renderer": "16.6.3"

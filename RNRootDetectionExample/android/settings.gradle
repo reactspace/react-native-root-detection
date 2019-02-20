@@ -1,3 +1,6 @@
 rootProject.name = 'RNRootDetectionExample'
 
+include ':react-native-root-detection'
+project(':react-native-root-detection').projectDir = new File(rootProject.projectDir, '../../android/')
+
 include ':app'
