@@ -3,16 +3,14 @@ Pod::Spec.new do |s|
   s.name         = "RNRootDetection"
   s.version      = "1.0.0"
   s.summary      = "RNRootDetection"
-  s.description  = <<-DESC
-                  RNRootDetection
-                   DESC
-  s.homepage     = ""
+  s.description  = "Detect rooted device"
+  s.homepage     = "https://github.com/reactspace/react-native-root-detection"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.author             = { "author" => "author@domain.cn" }
+  s.author             = { "author" => "gaurav.mnit07@gmail.com" }
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/author/RNRootDetection.git", :tag => "master" }
-  s.source_files  = "RNRootDetection/**/*.{h,m}"
+  s.source       = { :git => "https://github.com/reactspace/react-native-root-detection.git", :tag => "master" }
+  s.source_files  = "ios/RNRootDetection/**/*.{h,m}"
   s.requires_arc = true
 
 
@@ -20,5 +18,3 @@ Pod::Spec.new do |s|
   #s.dependency "others"
 
 end
-
-  

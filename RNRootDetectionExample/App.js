@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import { checkRootStatus, SecurityLevel } from 'react-native-root-detection';
-import { StyleSheet, Text, TouchableNativeFeedback, View } from 'react-native';
+import { StyleSheet, Text, Button, View } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -47,11 +47,9 @@ export default class App extends React.Component {
         <Text style={styles.welcome}>React Native Root Detection!</Text>
         {this.state.rootCheckStatus === 'Loading' && <Text style={styles.instructions}>{'Loading...'}</Text>}
         {this.state.rootCheckStatus === 'Success' && <Text style={styles.instructions}>{this.state.isRooted ? 'This device is rooted' : 'This device has passed all root detection checks'}</Text>}
-        <TouchableNativeFeedback onPress={this.onPress}>
-          <View style={styles.buttonContainer}>
-            <Text>{'Check for root / jailbreak'}</Text>
-          </View>
-        </TouchableNativeFeedback>
+        <View style={styles.buttonContainer}>
+          <Button title="Check for root / jailbreak" onPress={this.onPress} />
+        </View>
       </View>
     );
   }

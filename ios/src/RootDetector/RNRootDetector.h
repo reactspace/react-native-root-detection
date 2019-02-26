@@ -7,11 +7,17 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+#import <Foundation/Foundation.h>
 
-#import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface RNRootDetector : NSObject
 
-@property (nonatomic, strong) UIWindow *window;
++ (float)firmwareVersion;
++ (BOOL)isDeviceRooted;
++ (BOOL)isAppCracked;
++ (BOOL)isAppStoreVersion;
 
 @end
+
+NS_ASSUME_NONNULL_END

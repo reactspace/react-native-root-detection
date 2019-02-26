@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E59AE3A22259D5600D6143E /* RNRootDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E59AE3922259D5600D6143E /* RNRootDetector.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNRootDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNRootDetection.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNRootDetection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNRootDetection.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E59AE3822259D5600D6143E /* RNRootDetector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNRootDetector.h; sourceTree = "<group>"; };
+		7E59AE3922259D5600D6143E /* RNRootDetector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNRootDetector.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNRootDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNRootDetection.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNRootDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNRootDetection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -50,10 +53,28 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* RNRootDetection.h */,
-				B3E7B5891CC2AC0600A0062D /* RNRootDetection.m */,
+				7E59AE34222598AB00D6143E /* src */,
 				134814211AA4EA7D00B7C361 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		7E59AE34222598AB00D6143E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				7E59AE3B22259D7900D6143E /* RootDetector */,
+				B3E7B5881CC2AC0600A0062D /* RNRootDetection.h */,
+				B3E7B5891CC2AC0600A0062D /* RNRootDetection.m */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7E59AE3B22259D7900D6143E /* RootDetector */ = {
+			isa = PBXGroup;
+			children = (
+				7E59AE3822259D5600D6143E /* RNRootDetector.h */,
+				7E59AE3922259D5600D6143E /* RNRootDetector.m */,
+			);
+			path = RootDetector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,7 +104,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = Facebook;
+				ORGANIZATIONNAME = ReactSpace;
 				TargetAttributes = {
 					58B511DA1A9E6C8500147676 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -113,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3E7B58A1CC2AC0600A0062D /* RNRootDetection.m in Sources */,
+				7E59AE3A22259D5600D6143E /* RNRootDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,7 +226,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
